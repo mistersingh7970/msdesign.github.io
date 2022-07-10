@@ -1,0 +1,168 @@
+// SHORTCUTS //
+
+@mixin displayflexCENTER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin widthHEIGHT100 {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin logoLinkBOX {
+  width: 50vw;
+  height: 16vh;
+  //border: 2px solid snow;
+}
+
+// SHORTCUTS ENDING //
+
+.mainBOX {
+  @include widthHEIGHT100();
+  @include displayflexCENTER();
+  flex-direction: column;
+  overflow: hidden;
+  background-color: black;
+
+  .firstCONTAINER {
+    width: 100vw;
+    height: 20vh;
+    //border: 2px solid yellow;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+
+    .logoBOX {
+      @include logoLinkBOX();
+      @include displayflexCENTER();
+
+      .LOGO {
+        width: 4vw;
+        height: auto;
+        cursor: pointer;
+        animation: slidingfromTOP 3000ms ease;
+      }
+    }
+
+    .linkBOX {
+      @include logoLinkBOX();
+      @include displayflexCENTER();
+
+      .LINK {
+        width: 3vw;
+        height: auto;
+        cursor: pointer;
+        animation: slidingfromTOP 3000ms ease;
+      }
+    }
+  }
+
+  .secondCONTAINER {
+    width: 100vw;
+    height: 80vh;
+    //border: 2px solid red;
+    z-index: 1;
+    @include displayflexCENTER();
+
+    .textBOX {
+      width: 50vw;
+      height: 50vh;
+      @include displayflexCENTER();
+      //border: 2px solid green;
+
+      .headingBOX {
+        width: 50vw;
+        height: 40vh;
+        @include displayflexCENTER();
+        flex-direction: column;
+        //border: 2px solid blue;
+
+        .uppertextBOX {
+          width: 50vw;
+          height: 20vh;
+          @include displayflexCENTER();
+          //border: 2px solid orange;
+
+          .UPPERTEXT {
+            color: red;
+            font-family: 'Water Brush', cursive;
+            font-size: 4rem;
+            margin-bottom: -8vh;
+            animation: slidingLITTLE-BOTTOM 2000ms ease;
+            z-index: 1;
+          }
+        }
+
+        .lowertextBOX {
+          width: 50vw;
+          height: 20vh;
+          @include displayflexCENTER();
+          //border: 2px solid orange;
+
+          .LOWERTEXT {
+            color: white;
+            font-family: 'Bayon', sans-serif;
+            font-size: 5rem;
+            margin-top: -6vh;
+            animation: slidingLITTLE-TOP 2000ms ease;
+          }
+        }
+      }
+    }
+
+  }
+
+  .backgroundIMG {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: absolute;
+    animation: fadeIN 4000ms ease;
+  }
+}
+
+// ANIMATIONS //
+
+@keyframes fadeIN {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidingfromTOP {
+  from {
+    margin-top: -50vh;
+  }
+
+  to {
+    margin-top: 0vh;
+  }
+}
+
+@keyframes slidingLITTLE-TOP {
+  from {
+    margin-top: 0vh;
+  }
+
+  to {
+    margin-top: -6vh;
+  }
+}
+
+@keyframes slidingLITTLE-BOTTOM {
+  from {
+    margin-bottom: 0;
+  }
+
+  to {
+    margin-bottom: -8vh;
+  }
+}
+
+// ANIMATIONS ENDING //
