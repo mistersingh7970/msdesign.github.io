@@ -1,0 +1,206 @@
+// SHORTCUTS //
+
+@mixin displayflexCENTER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin widthHEIGHT100 {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin logoLinkBOX {
+  width: 50vw;
+  height: 16vh;
+  border: 2px solid snow;
+}
+
+// SHORTCUTS ENDING //
+
+.mainBOX {
+  @include widthHEIGHT100();
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+
+  .leftBOX {
+    width: 50vw;
+    height: 100vh;
+    @include displayflexCENTER();
+
+    .IMAGE {
+      width: 30vw;
+      height: auto;
+      animation: slidingfromLEFT 3000ms ease;
+    }
+  }
+
+  .rightBOX {
+    width: 50vw;
+    height: 100vh;
+    @include displayflexCENTER();
+    flex-direction: column;
+    //border: 2px solid blue;
+
+    .firstCONTAINER {
+      width: 50vw;
+      height: 20vh;
+      @include displayflexCENTER();
+      //border: 2px solid palevioletred;
+
+      .logoBOX {
+        width: 25vw;
+        height: 10vh;
+        @include displayflexCENTER();
+        //border: 2px solid green;
+
+        .LOGO {
+          width: 4vw;
+          height: auto;
+          cursor: pointer;
+          animation: slidingfromTOP 3000ms ease;
+        }
+      }
+
+      .linkBOX {
+        width: 25vw;
+        height: 10vh;
+        @include displayflexCENTER();
+        //border: 2px solid green;
+
+        .LINK {
+          width: 3vw;
+          height: auto;
+          cursor: pointer;
+          animation: slidingfromTOP 3000ms ease;
+        }
+      }
+    }
+
+    .secondCONTAINER {
+      width: 50vw;
+      height: 60vh;
+      //border: 2px solid white;
+      @include displayflexCENTER();
+
+      .textBOX {
+        width: 50vw;
+        height: 80vh;
+        @include displayflexCENTER();
+        flex-direction: column;
+        //border: 2px solid blue;
+
+        .headingBOX {
+          width: 50vw;
+          height: 40vh;
+          @include displayflexCENTER();
+          flex-direction: column;
+          //border: 2px solid goldenrod;
+          margin-top: -10vh;
+
+          .uppertextBOX {
+            width: 50vw;
+            height: 20vh;
+            @include displayflexCENTER();
+            //border: 2px solid cyan;
+
+            .UPPERTEXT {
+              color: white;
+              font-family: 'Water Brush', cursive;
+              font-size: 4rem;
+              animation: slidingLITTLE-BOTTOM 2000ms ease;
+              z-index: 1;
+              margin-bottom: -8vh;
+            }
+          }
+
+          .lowertextBOX {
+            width: 50vw;
+            height: 20vh;
+            @include displayflexCENTER();
+            //border: 2px solid cyan;
+
+            .LOWERTEXT {
+              font-family: 'Bayon', sans-serif;
+              font-size: 5rem;
+              margin-top: -6vh;
+              animation: slidingLITTLE-TOP 2000ms ease;
+
+            }
+          }
+        }
+
+        .paragraphBOX {
+          width: 50vw;
+          height: 20vh;
+          @include displayflexCENTER();
+          //border: 2px solid green;
+
+          .PARAGRAPH {
+            width: 40vw;
+            height: auto;
+            color: white;
+            font-family: "Poppins", sans-serif;
+            animation: fadeIN 5000ms ease;
+          }
+        }
+      }
+    }
+  }
+}
+
+// ANIMATIONS //
+
+@keyframes fadeIN {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidingfromTOP {
+  from {
+    margin-top: -50vh;
+  }
+
+  to {
+    margin-top: 0vh;
+  }
+}
+
+@keyframes slidingLITTLE-TOP {
+  from {
+    margin-top: 0vh;
+  }
+
+  to {
+    margin-top: -6vh;
+  }
+}
+
+@keyframes slidingLITTLE-BOTTOM {
+  from {
+    margin-bottom: 0;
+  }
+
+  to {
+    margin-bottom: -8vh;
+  }
+}
+
+@keyframes slidingfromLEFT {
+  from {
+    margin-left: -50vw;
+  }
+
+  to {
+    margin-left: 0vw;
+  }
+}
+
+// ANIMATIONS ENDING //

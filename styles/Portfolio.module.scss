@@ -1,0 +1,220 @@
+// SHORTCUTS //
+
+@mixin displayCENTER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin widhtHEIGTH100 {
+  width: 100vw;
+  height: 100vh;
+}
+
+.mainBOX {
+  @include widhtHEIGTH100();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  overflow: hidden;
+}
+
+.firstBOX {
+  width: 30vw;
+  height: 100vh;
+  //border: 2px solid yellowgreen;
+  display: flex;
+  flex-direction: column;
+  ;
+
+  .logoBOX {
+    width: 30vw;
+    height: 20vh;
+    @include displayCENTER();
+
+    .LOGO {
+      width: 4vw;
+      height: auto;
+      cursor: pointer;
+      animation: slidingfromTOP 3000ms ease;
+    }
+  }
+
+  .workBOX {
+    width: 30vw;
+    height: 80vh;
+    background-color: red;
+    @include displayCENTER();
+
+    .firstWORK {
+      width: 30vw;
+      height: auto;
+      cursor: pointer;
+      animation: slidingfromBOTTOM 5000ms ease;
+    }
+  }
+}
+
+.secondBOX {
+  width: 35vw;
+  height: 100vh;
+  //border: 2px solid yellowgreen;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  .textBOX {
+    width: 35vw;
+    height: 25vh;
+    @include displayCENTER();
+    flex-direction: column;
+    //border: 2px solid greenyellow;
+
+    .headingBOX {
+      width: 35vw;
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      //border: 2px solid green;
+
+      .uppertextBOX {
+        width: 35vw;
+        height: 10vh;
+        @include displayCENTER();
+        //border: 2px solid goldenrod;
+
+        .UPPERTEXT {
+          color: white;
+          font-family: 'Water Brush', cursive;
+          font-size: 4rem;
+          z-index: 1;
+        }
+      }
+
+      .lowertextBOX {
+        width: 35vw;
+        height: 10vh;
+        @include displayCENTER();
+        //border: 2px solid goldenrod;
+
+        .LOWERTEXT {
+          color: red;
+          font-family: 'Bayon', sans-serif;
+          font-size: 5rem;
+        }
+      }
+    }
+  }
+
+  .workBOX2 {
+    width: 35vw;
+    height: 70vh;
+    background-color: red;
+    cursor: pointer;
+    @include displayCENTER();
+    overflow: hidden;
+
+    .secondWORK {
+      width: 50vw;
+      height: auto;
+      cursor: pointer;
+      animation: slidingfromBOTTOM 3000ms ease;
+    }
+  }
+}
+
+.thirdBOX {
+  width: 30vw;
+  height: 100vh;
+  //border: 2px solid yellowgreen;
+  display: flex;
+  flex-direction: column;
+
+  .linkBOX {
+    width: 30vw;
+    height: 20vh;
+    @include displayCENTER();
+
+    .LINK {
+      width: 3vw;
+      height: auto;
+      cursor: pointer;
+      animation: slidingfromTOP 3000ms ease;
+    }
+  }
+
+  .workBOX3 {
+    width: 30vw;
+    height: 80vh;
+    background-color: red;
+    @include displayCENTER();
+    overflow: hidden;
+    cursor: pointer;
+    .thirdWORK {
+      width: 30vw;
+      height: auto;
+      animation: slidingfromBOTTOM 5000ms ease;
+    }
+  }
+}
+
+@keyframes fadeIN {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slidingfromTOP {
+  from {
+    margin-top: -50vh;
+  }
+
+  to {
+    margin-top: 0vh;
+  }
+}
+
+@keyframes slidingLITTLE-TOP {
+  from {
+    margin-top: 0vh;
+  }
+
+  to {
+    margin-top: 0vh;
+  }
+}
+
+@keyframes slidingLITTLE-BOTTOM {
+  from {
+    margin-bottom: 0;
+  }
+
+  to {
+    margin-bottom: 0vh;
+  }
+}
+
+@keyframes slidingfromLEFT {
+  from {
+    margin-left: -50vw;
+  }
+
+  to {
+    margin-left: 0vw;
+  }
+}
+
+@keyframes slidingfromBOTTOM {
+  from {
+    margin-bottom: -50vh;
+  }
+
+  to {
+    margin-bottom: 0vh;
+  }
+}

@@ -1,0 +1,384 @@
+// SHORTCUTS //
+
+@mixin displayflexCENTER {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin widhtheight100 {
+  width: 100vw;
+  height: 100vh;
+}
+
+@mixin flexCOLUMN {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flexROW {
+  display: flex;
+  flex-direction: row;
+}
+
+// SHORTCUTS ENDING //
+
+// MAIN CONTENT CSS //
+
+.mainBOX {
+  width: 100vw;
+  height: 400vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black
+}
+
+.firstCONTAINER {
+  @include widhtheight100();
+  @include flexROW();
+  background-color: black;
+
+  .imageBOX1 {
+    width: 50vw;
+    height: 100vh;
+    //border: 2px solid greenyellow;
+    @include displayflexCENTER();
+
+    .image1 {
+      width: 70vh;
+      height: auto;
+      animation: slidingfromLEFT 5000ms ease;
+    }
+  }
+
+  .contentBOX1 {
+    width: 50vw;
+    height: 100vh;
+    //border: 2px solid greenyellow;
+    @include displayflexCENTER();
+
+    .innerBOX1 {
+      width: 45vw;
+      height: 80vh;
+
+      //border: 2px solid greenyellow;
+      .headerBOX1 {
+        width: 45vw;
+        height: 20vh;
+        //border: 2px solid white;
+        @include displayflexCENTER();
+        flex-direction: row;
+
+        .logoBOX1 {
+          width: 22.5vw;
+          height: 20vh;
+          @include displayflexCENTER();
+
+          .LOGO1 {
+            width: 5vw;
+            height: auto;
+            animation: slidingfromTOP 5000ms ease;
+          }
+        }
+
+        .linkBOX1 {
+          width: 22.5vw;
+          height: 20vh;
+          @include displayflexCENTER();
+
+          .LINK1 {
+            width: 4vw;
+            height: auto;
+            animation: slidingfromTOP 5000ms ease;
+          }
+        }
+      }
+
+      .textBOX1 {
+        width: 45vw;
+        height: 24vh;
+        //border: 2px solid white;
+        @include displayflexCENTER();
+        flex-direction: column;
+
+        .upperheadingBOX1 {
+          width: 45vw;
+          height: 12vh;
+          @include displayflexCENTER();
+
+          //border: 2px solid blue;
+          .UPPERTEXT1 {
+            margin-bottom: -5vh;
+            font-size: 4rem;
+            color: white;
+            z-index: 1;
+            animation: uppertxtANIMATION 3000ms ease;
+            font-family: "Water Brush", cursive;
+          }
+        }
+
+        .lowerheadingBOX1 {
+          width: 45vw;
+          height: 12vh;
+          @include displayflexCENTER();
+
+          // border: 2px solid blue;
+          .LOWERTEXT1 {
+            color: red;
+            font-family: 'Bayon', sans-serif;
+            font-size: 6rem;
+            animation: fadeIN 3000ms ease;
+          }
+        }
+      }
+
+      .paragraphBOX1 {
+        width: 45vw;
+        height: 30vh;
+        @include displayflexCENTER();
+
+        .PARAGRAPH1 {
+          width: 33vw;
+          animation: fadeIN 5000ms ease;
+          color: white;
+          font-family: "Poppins", sans-serif;
+        }
+      }
+    }
+  }
+}
+
+.secondCONTAINER {
+  width: 100vw;
+  height: 100vh;
+  @include displayflexCENTER();
+  flex-direction: column;
+  //border: 2px solid red;
+
+  .textBOX2 {
+    width: 100vw;
+    height: 24vh;
+    //border: 2px solid white;
+    @include displayflexCENTER();
+    flex-direction: column;
+
+    .upperheadingBOX2 {
+      width: 100vw;
+      height: 12vh;
+      @include displayflexCENTER();
+
+      //border: 2px solid blue;
+      .UPPERTEXT2 {
+        margin-bottom: -5vh;
+        font-size: 4rem;
+        color: white;
+        z-index: 1;
+        animation: uppertxtANIMATION 3000ms ease;
+        font-family: "Water Brush", cursive;
+      }
+    }
+
+    .lowerheadingBOX2 {
+      width: 100vw;
+      height: 12vh;
+      @include displayflexCENTER();
+
+      // border: 2px solid blue;
+      .LOWERTEXT2 {
+        color: red;
+        font-family: 'Bayon', sans-serif;
+        font-size: 6rem;
+        animation: fadeIN 3000ms ease;
+      }
+    }
+  }
+
+  .paragraphBOX2 {
+    width: 100vw;
+    height: 30vh;
+    @include displayflexCENTER();
+
+    .PARAGRAPH2 {
+      width: 33vw;
+      animation: fadeIN 5000ms ease;
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+
+  .imageBOX2 {
+    width: 100vw;
+    height: 50vh;
+    @include displayflexCENTER();
+
+    .image2 {
+      width: 20vw;
+      height: auto;
+      //border: 2px solid green;
+    }
+  }
+}
+
+.thirdCONTAINER {
+  width: 100vw;
+  height: 80vh;
+  //border: 2px solid blueviolet;
+  @include displayflexCENTER();
+  flex-direction: row;
+  margin-top: -15vh;
+
+  .contentBOX3 {
+    width: 100vw;
+    height: 54vh;
+    //border: 2px solid gold;
+    @include displayflexCENTER();
+    flex-direction: column;
+
+    .textBOX3 {
+      width: 100vw;
+      height: 24vh;
+      //border: 2px solid white;
+      @include displayflexCENTER();
+      flex-direction: column;
+
+      .upperheadingBOX3 {
+        width: 100vw;
+        height: 12vh;
+        @include displayflexCENTER();
+
+        //border: 2px solid blue;
+        .UPPERTEXT3 {
+          margin-bottom: -5vh;
+          font-size: 4rem;
+          color: white;
+          z-index: 1;
+          animation: uppertxtANIMATION 3000ms ease;
+          font-family: "Water Brush", cursive;
+        }
+      }
+
+      .lowerheadingBOX3 {
+        width: 100vw;
+        height: 12vh;
+        @include displayflexCENTER();
+
+        // border: 2px solid blue;
+        .LOWERTEXT3 {
+          color: red;
+          font-family: 'Bayon', sans-serif;
+          font-size: 6rem;
+          animation: fadeIN 3000ms ease;
+        }
+      }
+    }
+
+    .paragraphBOX3 {
+      width: 100vw;
+      height: 30vh;
+      @include displayflexCENTER();
+
+      .PARAGRAPH3 {
+        width: 33vw;
+        animation: fadeIN 5000ms ease;
+        color: white;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+}
+
+.fourthCONTAINER {
+  width: 100vw;
+  height: 130vh;
+  //border:  2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+
+  .image4BOX1 {
+    width: 50vw;
+    height: 100vh;
+    @include displayflexCENTER();
+    overflow: hidden;
+    //border: 2px solid gold;
+  }
+
+  .IMAGE4 {
+    width: 130vw;
+    height: auto;
+    animation: slidingfromLEFT 5000ms ease;
+    z-index: 0;
+    margin-left: -10vw;
+  }
+
+  .image4BOX2 {
+    width: 50vw;
+    height: 100vh;
+    //border: 2px solid gold;
+    @include displayflexCENTER();
+
+    .IMAGE4second {
+      width: 50vw;
+      height: auto;
+      z-index: 1;
+      animation: slidingfromRIGHT 5000ms ease;
+    }
+  }
+}
+
+// MAIN CONTENT CSS ENDING //
+
+// ANIMATION //
+
+@keyframes slidingfromLEFT {
+  from {
+    margin-left: -90vw;
+  }
+
+  to {
+    margin-left: 0vw;
+  }
+}
+
+@keyframes fadeIN {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes uppertxtANIMATION {
+  from {
+    margin-bottom: 0vh;
+  }
+
+  to {
+    margin-bottom: -5vh;
+  }
+}
+
+@keyframes slidingfromTOP {
+  from {
+    margin-top: -50vh;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
+@keyframes slidingfromRIGHT {
+  from {
+    margin-right: -50vw;
+  }
+
+  to {
+    margin-right: 0;
+  }
+}
+
+// ANIMATION ENDING //
